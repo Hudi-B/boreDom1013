@@ -11,7 +11,14 @@ const professions = [
     "Firefighter"
 ];
 
-console.table(professions)
+const form = document.getElementById("form")
+const fname = document.getElementById("fname")
+const gender = document.getElementById("gender").checked.value
+const age = document.getElementById("age1").checked.value
+const occupation = getElementById("profession")
+const branch = getElementById("branch")
+const email = getElementById("email")
+const password = getElementById("password")
 
 let txt = ""
     for(let x of professions.keys()){
@@ -27,8 +34,4 @@ function user(name, age, gender, occup, prof, email, pass, ){
     this.prof = prof;
     this.email = email;
     this.pass = pass;
-}
-
-function submit(){
-    
 }
