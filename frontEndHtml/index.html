@@ -10,25 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
 
-    <style>
-        /* Style for the container holding the two columns */
-        .container {
-            display: flex; /* Use flexbox for layout */
-            width: 50%;
-            float: left;
-        }
-
-        /* Style for each column */
-        .column {
-            flex: 1; /* Each column takes up equal space */
-            padding: 20px; /* Add some padding for spacing */
-            border: 1px solid #ccc; /* Add a border for visibility */
-            width: 75%;
-        }
-        .age_table{
-           width: 90%; 
-        }
-    </style>
+    
 
 </head>
 <body>
@@ -37,36 +19,51 @@
                 <div class="column">
                     <label for="fname">Név:</label>
                     <input type="text" id="name" name="name" value="Lakatos Ferenc">
-                    
+                    <div style="display: inline-block;">
+                        <label>Nem: </label>
+                        <input type="radio" id="female" name="female" value="male">
+                            <label for="age1">Nő</label>
+                        <input type="radio" id="male" name="male" value="male">
+                            <label for="age1">Férfi</label>            
+                    </div>
                     <br>
 
                     <table class="age_table">
                         <tr>
                             <td>
                                 <input type="radio" id="age1" name="age" value="30">
-                                <label for="age1">0 - 30</label>
+                                <label for="age1">18 - 20</label>
                             </td>
                             <td><input type="radio" id="age1" name="age" value="30">
-                                <label for="age1">0 - 30</label></td>
+                                <label for="age1">21 - 24</label></td>
                         </tr>
                         <tr>
                             <td><input type="radio" id="age1" name="age" value="30">
-                                <label for="age1">0 - 30</label></td>
+                                <label for="age1">25 - 30</label></td>
                             <td><input type="radio" id="age1" name="age" value="30">
-                                <label for="age1">0 - 30</label></td>
+                                <label for="age1">30 +</label></td>
                         </tr>
                     </table>
 
+                    <label>Foglalkozás:</label>
+                    <input type="text" name="profession" id="profession"><br>
+
+                    <label>Ágazat:</label>
+                    <div id="branch"></div><br>
+
+                    <label>Email:</label>
+                    <input type="text" name="email" id="email"><br>
+                    
+                    <label>Jelszó:</label>
+                    <div>
+                        <input type="password" name="password" id="password"><br>
+                        <input type="button" value="Generáljon random jelszót">
+                    </div>
                     
                 </div>
-                <div class="column">
-                    <label for="fname">Név:</label>
-                    <input type="text" id="name" name="name" value="Lakatos Ferenc">
-                    
-                </div>
-                
-            <input type="submit" value="Elküld">
             </div>
+            <br>
+            <input type="submit" value="Elküld">
       </form> 
 </body>
 </html>
