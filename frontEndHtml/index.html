@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontEnd/index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="/backEnd/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
+
+    <style>
+        /* Style for the container holding the two columns */
+        .container {
+            display: flex; /* Use flexbox for layout */
+            width: 50%;
+            float: left;
+        }
+
+        /* Style for each column */
+        .column {
+            flex: 1; /* Each column takes up equal space */
+            padding: 20px; /* Add some padding for spacing */
+            border: 1px solid #ccc; /* Add a border for visibility */
+            width: 75%;
+        }
+        .age_table{
+           width: 90%; 
+        }
+    </style>
+
 </head>
 <body>
-    
+    <form action="">
+            <div class="container">
+                <div class="column">
+                    <label for="fname">Név:</label>
+                    <input type="text" id="name" name="name" value="Lakatos Ferenc">
+                    
+                    <br>
+
+                    <table class="age_table">
+                        <tr>
+                            <td>
+                                <input type="radio" id="age1" name="age" value="30">
+                                <label for="age1">0 - 30</label>
+                            </td>
+                            <td><input type="radio" id="age1" name="age" value="30">
+                                <label for="age1">0 - 30</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" id="age1" name="age" value="30">
+                                <label for="age1">0 - 30</label></td>
+                            <td><input type="radio" id="age1" name="age" value="30">
+                                <label for="age1">0 - 30</label></td>
+                        </tr>
+                    </table>
+
+                    
+                </div>
+                <div class="column">
+                    <label for="fname">Név:</label>
+                    <input type="text" id="name" name="name" value="Lakatos Ferenc">
+                    
+                </div>
+                
+            <input type="submit" value="Elküld">
+            </div>
+      </form> 
 </body>
 </html>

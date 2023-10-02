@@ -1,4 +1,8 @@
 body{
+<<<<<<< HEAD
     background: rgb(7,5,42);
     background: linear-gradient(100deg, rgba(7,5,42,1) 10%, rgba(9,10,121,1) 48%, rgba(0,213,255,1) 84%);
+=======
+    background-color: red;
+>>>>>>> 74edc1e2d77cd1b3a611e5bb446c9dd15e6215e1
 }
