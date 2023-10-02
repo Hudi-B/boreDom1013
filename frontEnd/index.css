@@ -33,7 +33,7 @@ label{
     display: none;
 }
 
-.submit_btn {        /*width:height == 3:1*/
+.common_btn {        /*width:height == 3:1*/
     width: fit-content;
     height:2.5vw;
     border:none;
@@ -41,10 +41,10 @@ label{
     border-radius:5vw;     /*half as height*/
     background: none;
     font-size: 1vw;
-
+    margin-bottom:1.5vw;
   }
   
-  .submit_btn:active {
+  .common_btn:active {
     background-color: black; /*make this the same as the border color*/
     color:white; 
   }
@@ -72,5 +72,8 @@ label{
     
   }
 
+  input[type="radio"]{
 
+
+  }
 
