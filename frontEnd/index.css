@@ -14,13 +14,13 @@ body{
   width: 35vw;
   background-color: rgba(255,255,255,0.36018914401698177);
   border-radius: 3vw;
-  padding-left: 7vw;
+  padding-left: 4vw;
   box-shadow: 4px 4px rgb(38, 37, 37);
     
 }
 hr{
-  margin-top: 0;
-  border:2px solid black;
+  border-top: 1px solid black;
+  border-width: 50%;
 }
 
 .age_table{
@@ -58,6 +58,7 @@ label{
   }
   .common_btn:active {
     background-color: black; /*make this the same as the border color*/
+    border-color: black;
     color:white; 
   }
 
@@ -69,6 +70,7 @@ label{
   letter-spacing: 0.2vw;
   margin-top: 1.5vw;
   margin-bottom:1.5vw;
+  
 }
 
 
@@ -96,5 +98,6 @@ label{
   }
 
   .div_big{
-    margin: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
   }
