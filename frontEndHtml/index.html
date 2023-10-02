@@ -13,6 +13,7 @@
 </head>
 <body>
     <form class="block">
+        <div class="div_big">
                     <label for="fname">Név:</label>
                     <input class="input_text" type="text" id="name" name="name" value="Lakatos Ferenc">
                     <div style="display: inline-block;">
@@ -45,6 +46,7 @@
                     <input class="input_text" type="text" name="profession" id="profession"><br>
 
                     <label>Ágazat:</label>
+                    <hr>
                     <div id="branch"></div><br>
 
                     <label>Email:</label>
@@ -52,12 +54,12 @@
                     
                     <label>Jelszó:</label>
                     <div>
-                        <input class="common_btn" class="spacing" type="button" value="Generáljon random jelszót">
-                        <input class="common_btn" type="button" value="Megadom magam">
+                        <input class="common_btn" class="spacing" type="button" value="Gép által generált">
+                        <input class="common_btn" type="button" value="Saját jelszó">
                         <input type="password" name="password" id="password" class="psw_input"><br>
                     </div>
-            <br>
-            <input class="common_btn " type="submit" value="Elküld">
-      </form> 
+            <input class="common_btn submit_btn" type="submit" value="Regisztrál">
+        </div>
+    </form> 
 </body>
 </html>

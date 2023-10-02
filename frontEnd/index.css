@@ -41,18 +41,25 @@ label{
     border-radius:5vw;     /*half as height*/
     background: none;
     font-size: 1vw;
-    margin-bottom:1.5vw;
   }
-  
   .common_btn:active {
     background-color: black; /*make this the same as the border color*/
     color:white; 
   }
-  
-  
+
+.submit_btn{
+  width: 20vw;
+  height: 4vw;
+  font-size: 2vw;
+  font-weight: bold;
+  letter-spacing: 0.2vw;
+  margin-top: 1.5vw;
+  margin-bottom:1.5vw;
+}
+
+
   .input_text{
-  width: 10%;
-  height: 60;
+  width: 40%;
   font-size: 1vw;
   background: none;
   border:none;
@@ -61,15 +68,8 @@ label{
   }
   
   .input_text:focus{    /*while clicked on or writing*/
-    background-color:blue;
     color: white;
-    opacity: 0.2;
-    background-color: rgba(0,0,0,0.2);
-  }
-
-  .spacing{
-    margin-top: 10px;
-    
+    background-color: rgba(0, 0, 0, 1);/*color of the body background*/
   }
 
   input[type="radio"]{
@@ -77,3 +77,6 @@ label{
 
   }
 
+  .div_big{
+    margin: 1vw;
+  }
