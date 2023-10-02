@@ -11,10 +11,20 @@ const professions = [
     "Firefighter"
 ];
 
-function user(name, age, occup, prof, ){
-
+function user(name, age, gender, occup, prof, email, pass, ){
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+    this.occup = occup;
+    this.prof = prof;
+    this.email = email;
+    this.pass = pass;
 }
 
 function submit(){
-
+    let txt = ""
+    for(let x of professions.keys()){
+        txt += "<input type=\"checkbox\" value=\"" + professions[x] + "\">\n<label>" + professions[x] + "</label><br>"
+    }
+    document.getElementById("prof").innerHTML = "<form>\n" + txt + "\n</form>"
 }
