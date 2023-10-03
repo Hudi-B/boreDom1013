@@ -2,12 +2,11 @@
   margin: 0;
   padding: 0;
   border-width: 0px;
-  text-shadow: rgba(0, 0, 0, 0.438) 1px 0 10px;
+  font-size:medium;
   color: #fff;
 }
-svg{
-  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.438));
-}
+
+
 body {
   min-height: 100vh;
   display: flex;
@@ -16,28 +15,33 @@ body {
   background-image: url('../images/bg.jpg');
   background-size: cover;
   background-position: center;
+
 }
 
 .test {
     position:relative;
-    max-width: 900px;
+    max-width: 1000px;
     width: 90%;
-    padding: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     border:solid 0.2vw white;
     border-radius: 2vw;
     outline: auto;
     backdrop-filter: blur(10px);
   }
 
-  .left {
-    background-color: #2196F3;
-    padding: 20px;
-    float: left;
-    width: 50%; /* The width is 20%, by default */
+
+
+  .left, .right {       /* When theyre next to e.o. */
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    float:left;
+    width: 50%; 
   }
-  
-  .right {
-    background-color: #04AA6D;
-    padding: 20px;
-    float: left;
-    width: 50%;
+  @media screen and (max-width: 1000px) { /* When theyre on top of e.o.   only write changes here */
+    .left, .right {
+      width: 100%; 
+    }
+  }
