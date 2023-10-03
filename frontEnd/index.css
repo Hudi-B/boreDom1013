@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  border-width: 0px;
   text-shadow: rgba(0, 0, 0, 0.438) 1px 0 10px;
   color: #fff;
 }
@@ -18,21 +18,26 @@ body {
   background-position: center;
 }
 
-.container {
-  position: relative;
-  max-width: 740px;
-  width: 100%;
-  padding: 25px;
-  border-radius: 8px;
-  outline: auto;
-  backdrop-filter: blur(10px);
-}
-.container header {
-  font-size: 22px;
-  font-weight: 600;
-  color: #fff;
-  text-shadow: rgba(0, 0, 0, 0.438) 1px 0 10px;
-}
-.container form {
-  margin-top: 30px;
-}
+.test {
+    position:relative;
+    max-width: 900px;
+    width: 90%;
+    padding: 10px;
+    border:solid 0.2vw white;
+    border-radius: 2vw;
+    outline: auto;
+    backdrop-filter: blur(10px);
+  }
+
+  .left {
+    background-color: #2196F3;
+    padding: 20px;
+    float: left;
+    width: 50%; /* The width is 20%, by default */
+  }
+  
+  .right {
+    background-color: #04AA6D;
+    padding: 20px;
+    float: left;
+    width: 50%;
