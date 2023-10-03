@@ -1,10 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-shadow: rgba(0, 0, 0, 0.438) 1px 0 10px;
+  color: #fff;
+}
+svg{
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.438));
+}
 body {
-    /* fallback for old browsers */
-    background: #6a11cb;
-    
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-    
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
-    }
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  max-width: 740px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 8px;
+  outline: auto;
+  backdrop-filter: blur(10px);
+}
+.container header {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.438) 1px 0 10px;
+}
+.container form {
+  margin-top: 30px;
+}
