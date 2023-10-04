@@ -25,3 +25,33 @@ body {
     max-width: 720px;
     backdrop-filter: invert(80%);
 }
+
+
+ /*#region gender radio button*/
+ .buttons_gender {  padding:0px;}
+ .button_gender { text-decoration:none; padding:5px; padding-left: 25px; padding-right: 25px; float:left; }
+ .male { background: rgb(65, 65, 65); color:#fff; border-radius: 30px 0 0 30px; opacity:0.5; }
+ .male.active { background:rgb(37, 37, 37); opacity:1; }
+ .male:hover,.female:hover {opacity:1;}
+ .female { background:rgb(65, 65, 65); color:#fff; border-radius: 0 30px 30px 0; opacity:0.5; }
+ .female.active { background:rgb(37, 37, 37); opacity:1; backdrop-filter: invert(); }
+
+ .scale {
+    animation: scaleReverse .4s forwards cubic-bezier(1, 1, 0, 0); 
+    &:active { animation: scale .1s forwards; }
+  }
+ 
+ @keyframes scale {
+   from { transform: scale(1); }
+   to { transform: scale(.9); }
+ }
+ 
+ @keyframes scaleReverse {
+   from { transform: scale(.9); }
+   20% { transform: scale(1.05); }
+   40% { transform: scale(.98); }
+   to { transform: scale(1); }
+ }
+/*#endregion*/
+
+
