@@ -19,14 +19,18 @@
                 <div class="left"><!--Name, Gender, Email, Password-->
                     <label>Name:</label><br>
                     <input type="text" class="textinput" placeholder="Lakatos Ferenc" onclick="this." id="text_name"><br>
-                    <div class="smallinputs">
-                        <div class="buttons_gender">
-                            <a href="#" class="button_gender male active" data-gender="1"><i class="fa fa-male"></i> Male</a>
-                            <a href="#" class="button_gender female" data-gender="2"><i class="fa fa-female"></i> Female</a>
-                          </div>
-                    </div>
-                    <div class="smallinputs">
-                        <input type="range" min="18" max="50" class="slider">
+                    
+                    <div class="flex-container">
+                        <div class="flex-container-left">
+                            <div class="buttons_gender">
+                                <a href="#" class="button_gender male active" data-gender="1"><i class="fa fa-male"></i> Male</a>
+                                <a href="#" class="button_gender female" data-gender="2"><i class="fa fa-female"></i> Female</a>
+                              </div>
+                        </div>
+                        <div class=" flex-container-right">
+                            <label for="ageslider">kor</label><br>
+                            <input type="range" id="ageslider" min="18" max="50" class="slider">
+                        </div>
                     </div>
 
 

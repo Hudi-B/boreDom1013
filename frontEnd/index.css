@@ -30,8 +30,6 @@ body {
     backdrop-filter: blur(10px);
   }
 
-
-
   .left, .right {       /* When theyre next to e.o. */
     padding-top: 20px;
     padding-left: 10px;
@@ -46,18 +44,35 @@ body {
     }
   }
 
-  .smallinputs{
-    padding: 0px;
-    margin: 0px;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: auto;
-    border:solid;
-    display: inline-block;
-  }
+
+
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: left;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: none;
+}
+
+
+
+
   
   /*#region gender radio button*/
-  .buttons_gender {  padding:10px; padding-left: 0px;}
+  .buttons_gender { padding: 10px; padding-left: 0px;}
   .button_gender { text-decoration:none; padding:5px; padding-left: 25px; padding-right: 25px; float:left; }
   .male { background: rgb(65, 65, 65); color:#fff; border-radius: 30px 0 0 30px; opacity:0.5; }
   .male.active { background:rgb(37, 37, 37); opacity:1; }
@@ -90,28 +105,39 @@ body {
     color: transparent;
   }
 
-
+  /*#region slider*/
   .slider{
     -webkit-appearance: none;
-    width:80%;
-    height: 9px;
+    width:300px;
+    height: 13px;
     border-radius: 15px;
-    background-color: #2b2b32;
+    background-color: rgb(33, 33, 33);
+    border: solid rgba(255, 255, 255, 0.8) 2px;
+    outline-style: solid;
+    outline-color: invert;
     outline: none;
     transition: all 0.3s ease;
-}
-.slider::-webkit-slider-thumb{
+
+  }
+  .slider::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
     transform: rotate(45deg);
-    background: #e9203b;
+    background: #2b2b32;
+    border: solid rgba(255, 255, 255, 0.6) 2px;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-.slider::-webkit-slider-thumb:hover{
+  }
+  .slider::-webkit-slider-thumb:hover{
     transform: scale(1.2, 0.9);
-}
-  
+  }
+
+    /*#endregion*/
+
+
+
+
+
