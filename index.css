@@ -22,7 +22,7 @@ body {
     border: solid 5px white;
     border-radius: 2vw;
     position: relative;
-    max-width: 720px;
+    max-width: 1080px;
     backdrop-filter: invert(80%);
 }
 
@@ -54,4 +54,14 @@ body {
  }
 /*#endregion*/
 
+.custom-range::-ms-thumb {
+  background: gray;
+}
 
+.custom-range::-webkit-slider-thumb {
+  background: gray;
+}
+
+.custom-range::-moz-range-thumb {
+  background: gray;
+}
