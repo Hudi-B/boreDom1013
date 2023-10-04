@@ -1,3 +1,29 @@
+
+jQuery('.button_gender').click(function(){
+    var button = jQuery(this);
+    if (button.hasClass('active') == false){
+      jQuery('.button_gender').removeClass('active').removeClass('scale');
+      button.addClass('active scale');
+      know_gender();
+    }
+  });
+  
+  function know_gender(){
+    var id_gender = parseInt(jQuery('.button_gender.active').data('gender'));
+    var name_gender = '';
+    if (id_gender == 1){
+      name_gender = 'Male';
+    } else if (id_gender == 2){ 
+      name_gender = 'Female';
+    } else {
+      name_gender = 'Select a Gender';
+    }  
+    jQuery('.status li .id_gender').html(id_gender);
+    jQuery('.status li .name_gender').html(name_gender);
+  }
+
+
+
 const professions = [
     "Cashier",
     "Policeman",
@@ -35,3 +61,6 @@ function user(name, age, gender, occup, prof, email, pass, ){
     this.email = email;
     this.pass = pass;
 }
+
+
+
