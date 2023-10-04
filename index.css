@@ -1,0 +1,27 @@
+body {
+    /* fallback for old browsers 
+    background: #6a11cb;
+    
+    /* Chrome 10-25, Safari 5.1-6 
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1)); */
+
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    }
+
+.container{
+    border: solid 5px white;
+    border-radius: 2vw;
+    position: relative;
+    max-width: 720px;
+    backdrop-filter: invert(80%);
+}
