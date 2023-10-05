@@ -54,10 +54,11 @@ body {
  }
 /*#endregion*/
 
+/*#region Slider*/
 .slider{
   -webkit-appearance: none;
   width:80%;
-  height: 7px;
+  height: 9px;
   border-radius: 15px;
   background-color: #181818;
   border: solid 1px white;
@@ -81,9 +82,9 @@ body {
 .slider::-webkit-slider-thumb:hover{
   transform: scale(1.2, 0.9);
 }
+/*#endregion*/
 
-
-
+/*#region textinput*/
 .text-center{
 	color:#fff;	
 	text-transform:uppercase;
@@ -134,3 +135,8 @@ body {
 	font-size:12px;
 	
 }
+/*#endregion*/
+
+
+
+
