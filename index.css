@@ -23,7 +23,7 @@ body {
     border-radius: 2vw;
     position: relative;
     max-width: 1080px;
-    backdrop-filter: invert(80%);
+    backdrop-filter: blur(10px);
 }
 
 
@@ -117,7 +117,7 @@ body {
 }
 .input-container input{ 
   border:0;
-  border-bottom:1px solid #555;  
+  border-bottom:1px solid #000000;  
   background:transparent;
   width:100%;
   padding:8px 0 5px 0;
@@ -127,7 +127,7 @@ body {
 .input-container input:focus{ 
  border:none;	
  outline:none;
- border-bottom:1px solid #e74c3c;	
+ border-bottom:1px solid #ffffff;	
 }
 .input-container input:focus ~ label,
 .input-container input:valid ~ label{
@@ -137,6 +137,83 @@ body {
 }
 /*#endregion*/
 
+/*#region select*/
 
+.list-choice{
+  width:30vw;
+  margin:1em auto;
+  position: relative;
+  cursor: pointer;  
+}
+.list-choice input[type="radio"]{
+  position:absolute;
+  left:-9999px;
+}
 
+.list-choice-title {
+width: 100%;
+display: block;
+background: #434343;
+text-align: center;
+padding: 0.55em 1em;
+box-sizing: border-box;
+color: #FFF;
+text-shadow: 0 1px 0 #CACACA;
+border-radius: 0.2em;
+}
+.list-choice:hover .list-choice-title {
+border-radius:0.2em 0.2em 0 0;
+}
+.list-choice-objects label:nth-last-of-type(1) span{
+  border-radius:0 0 0.2em 0.2em;
+}
+.list-choice input[type="radio"] + span {
+color: #000000;
+background: none;
+padding: 0.3em .6em;
+display: block;
+text-align: center;
+box-sizing: border-box;
+cursor: pointer;
+width: 100%;
+}
+.list-choice-objects {
+position: absolute;
+top: 10px;
+padding-top: 2.1em;
+box-sizing: border-box;
+width: 100%;
+overflow: hidden;
+max-height: 0;
+transition: all 250ms ease;
+justify-content: space-between; /* Add justify-content property */
 
+}
+.list-choice:hover .list-choice-objects  input[type="radio"] + span {
+position: justify;
+top: 0;
+transition: all 250ms ease-in-out;
+}
+.list-choice:hover input[type="radio"] + span:hover {
+background:rgb(91, 91, 91);
+border-radius: 20px;
+color: white;
+}
+.list-choice:hover input[type="radio"]:checked + span:hover {
+background:#676767;
+}
+.list-choice:hover input[type="radio"]:checked + span {
+border-radius: 20px;
+border: 1px solid white;
+backdrop-filter: invert(100%);
+background-color:rgba(255, 255, 255, 0.1);
+}
+.list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked + span{
+  border-radius:0 0 0.2em 0.2em;
+}
+
+.list-choice:hover .list-choice-objects {
+max-height: 540px;
+}
+
+/*#endregion*/
