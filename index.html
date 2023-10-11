@@ -17,60 +17,65 @@
   <div class="container w-50">
     <div>
       <form action="">
-          <div style="text-align: center;" class="pt-2">
+          <div style="text-align: center;" class="pt-2">          <!--Header text-->
               <h1>Register</h1>
               <p>Please input your credentials</p>
           </div>
-          <div class="input-container right-inner-addon">
+          <div class="input-container right-inner-addon">         <!--Name input-->
             <i class="material-symbols-outlined">signature</i>
             <input type="text" required=""/>
             <label>Name</label>
           </div>
-          <div class="input-container right-inner-addon">
+          <div class="input-container right-inner-addon">         <!--Email input-->
             <i class="material-symbols-outlined">mail</i>
             <input type="mail" required=""/>
             <label>Email</label>
           </div>
-          <div class="input-container right-inner-addon">
-            <i class="material-symbols-outlined" title="Hide password">visibility</i>
-            <input type="password" required=""/>
+          <div class="input-container right-inner-addon">         <!--Password input-->
+            <i class="material-symbols-outlined" title="Hide password" id="passVisIcon">visibility_off</i>
+            <input type="password" required="" id="passwordInput"/>
             <label>Password</label>
           </div>
-          <div class="input-container right-inner-addon">
-            <i class="material-symbols-outlined" title="Generate password">autorenew</i>
-            <input type="password" required=""/>
+          <div class="input-container right-inner-addon">         <!--Password input re-->
+            <i class="material-symbols-outlined" title="Generate password" id="passGenIcon">autorenew</i>
+            <input type="password" required="" id="passwordInputRe"/>
             <label>Password again</label>
           </div>
-          <div style="text-align: center;" class="justify-content-evenly">
-            <label for="ageRange" class="form-label">Age</label><br>
-            <input type="range" class="form-range" style="width: 60%;" id="ageRange">
-            <div style="border-bottom: 1px solid #fff; margin-bottom:20px;"></div>
+          <div>                                                   <!--Age input-->
+            <label">Age</label>
+            <label style="float: right;" id="ageShow">Select</label>
+            <div style="text-align: center;" class="justify-content-evenly">
+              <div style="display: inline;">
+                <i class="material-symbols-outlined" title="Generate password">man</i>
+                <input type="range" class="form-range" style="width: 60%;" id="ageRange" min="18" max="60" >
+                <i class="material-symbols-outlined" title="Generate password">elderly</i>
+              </div>
+              <div class="pb-2" style="border-bottom: 1px solid #fff; margin-bottom:20px;"></div>
+            </div>
           </div>
-          <div style="text-align: center;" class="justify-content-evenly">
-            <div>
-              <label class="form-label">Gender</label><br>
-              <input type="radio" name="gender" id="male">
-              <label for="male"><i class="material-symbols-outlined" title="male" style="font-size: 70px;">male</i></label>
-              <input type="radio" name="gender" id="female">
-              <label for="female"><i class="material-symbols-outlined" title="female" style="font-size: 70px;">female</i></label>
+          <div" class="justify-content-evenly">                   <!--Gender input-->
+              <label style="float: left;">Gender</label>
+              <label style="float: right;" id="genderShow">Select</label>
+            <div style="clear: left; clear: right; text-align: center;">
+              <input type="radio" name="gender" id="maleRadio" value="Male" onclick="selectedGender(this)">
+              <label for="maleRadio"><i class="material-symbols-outlined" title="male" style="font-size: 70px;">male</i></label>
+              <input type="radio" name="gender" id="femaleRadio" value="Female" onclick="selectedGender(this)">
+              <label for="femaleRadio"><i class="material-symbols-outlined" title="female" style="font-size: 70px;">female</i></label>
             </div>
             <div style="border-bottom: 1px solid #fff; margin-bottom:20px;"></div>
           </div>
-          <div class="input-container right-inner-addon">
+          <div class="input-container right-inner-addon">          <!--Field input-->
             <i class="material-symbols-outlined">work</i>
             <input type="text" required=""/>
             <label>Field</label>
           </div>
-          <div class="right-inner-addon dropdown">
-            <i class="material-symbols-outlined" id="dropIcon">arrow_drop_up</i>
-            <select class="form-select selectpicker" id="jobSelect" onfocusin="Dropdown()" onfocusout="Dropdown()" onclick="Dropdown()">
-              <option>Select a profession</option>
-              <option>Policeman</option>  
-              <option>Fireman</option>
-              <option>Medic</option>
+          <div class="right-inner-addon dropdown">                 <!--Job select-->
+            <i class="material-symbols-outlined" id="dropIcon">keyboard_arrow_left</i>
+            <select class="form-select selectpicker" id="jobSelect">
+              <option style="color: #383838;">Select a profession</option>
             </select>
           </div>
-          <div style="text-align: center;" class="py-4">
+          <div style="text-align: center;" class="py-4">            <!--Submit button-->
             <input type="button" id="sub" class="btn btn-outline-light" value="Submit">
           </div>
       </form>
