@@ -118,3 +118,26 @@ body {
   font-size:16px;
   color:#fff;
 }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+input[type="radio"] {
+  display: none;
+  appearance: none;
+}
+
+input[type="radio"] + label {
+  font-size: 40px;
+  color: #fff;  
+}
+
+input[type="radio"]:checked + label {
+  font-size: 50px;
+  color: #383838;
+}
