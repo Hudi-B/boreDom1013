@@ -133,11 +133,21 @@ input[type="radio"] {
 }
 
 input[type="radio"] + label {
-  font-size: 40px;
   color: #fff;  
 }
 
 input[type="radio"]:checked + label {
-  font-size: 50px;
   color: #383838;
+}
+
+.right-inner-addon i {
+  position: absolute;
+  right: 0px;
+  padding: 12px 12px;
+  font-size: 20px;
+}
+
+.selectpicker:focus {
+  border-bottom: 1px solid #383838;
+  box-shadow: none;
 }

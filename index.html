@@ -7,56 +7,65 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="index.css">
     <title>Register</title>
 </head>
 <body>
 
-  <div class="container w-50 my-10">
-
+  <div class="container w-50">
+    <div>
       <form action="">
           <div style="text-align: center;" class="pt-2">
               <h1>Register</h1>
               <p>Please input your credentials</p>
           </div>
-          <div class="input-container">		
+          <div class="input-container right-inner-addon">
+            <i class="material-symbols-outlined">signature</i>
             <input type="text" required=""/>
             <label>Name</label>
           </div>
-          <div class="input-container">		
+          <div class="input-container right-inner-addon">
+            <i class="material-symbols-outlined">mail</i>
             <input type="mail" required=""/>
             <label>Email</label>
           </div>
-          <div class="input-container">		
+          <div class="input-container right-inner-addon">
+            <i class="material-symbols-outlined" title="Hide password">visibility</i>
             <input type="password" required=""/>
             <label>Password</label>
           </div>
-          <div class="input-container">		  
+          <div class="input-container right-inner-addon">
+            <i class="material-symbols-outlined" title="Generate password">autorenew</i>
             <input type="password" required=""/>
             <label>Password again</label>
           </div>
           <div style="text-align: center;" class="justify-content-evenly">
             <label for="ageRange" class="form-label">Age</label><br>
             <input type="range" class="form-range" style="width: 60%;" id="ageRange">
+            <div style="border-bottom: 1px solid #fff; margin-bottom:20px;"></div>
           </div>
           <div style="text-align: center;" class="justify-content-evenly">
             <div>
               <label class="form-label">Gender</label><br>
               <input type="radio" name="gender" id="male">
-              <label for="male"><span class="material-symbols-outlined">male</span></label>
+              <label for="male"><i class="material-symbols-outlined" title="male" style="font-size: 70px;">male</i></label>
               <input type="radio" name="gender" id="female">
-              <label for="female"><span class="material-symbols-outlined">female</span></label>
+              <label for="female"><i class="material-symbols-outlined" title="female" style="font-size: 70px;">female</i></label>
             </div>
+            <div style="border-bottom: 1px solid #fff; margin-bottom:20px;"></div>
           </div>
-          <div class="input-container">		
+          <div class="input-container right-inner-addon">
+            <i class="material-symbols-outlined">work</i>
             <input type="text" required=""/>
             <label>Field</label>
           </div>
-          <div>
-            <select class="form-select">
+          <div class="right-inner-addon dropdown">
+            <i class="material-symbols-outlined" id="dropIcon">arrow_drop_up</i>
+            <select class="form-select selectpicker" id="jobSelect" onfocusin="Dropdown()" onfocusout="Dropdown()" onclick="Dropdown()">
               <option>Select a profession</option>
-              <option>Policeman</option>
+              <option>Policeman</option>  
               <option>Fireman</option>
               <option>Medic</option>
             </select>
@@ -65,7 +74,7 @@
             <input type="button" id="sub" class="btn btn-outline-light" value="Submit">
           </div>
       </form>
-
+    </div>
   </div>
 
 <script src="index.js" defer></script>
