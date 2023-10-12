@@ -65,3 +65,7 @@ passGenIcon.addEventListener("click", function() {
     passwordInput.value = pass;
     passwordInputRe.value = pass;
 })
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });

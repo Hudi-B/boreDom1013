@@ -138,11 +138,11 @@ input[type="radio"] {
 }
 
 input[type="radio"] + label {
-  color: #fff;  
+  color: #383838;  
 }
 
 input[type="radio"]:checked + label {
-  color: #383838;
+  color: #fff;
 }
 
 .right-inner-addon i {

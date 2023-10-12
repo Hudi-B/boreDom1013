@@ -32,20 +32,20 @@
             <label>Email</label>
           </div>
           <div class="input-container right-inner-addon">         <!--Password input-->
-            <i class="material-symbols-outlined" title="Hide password" id="passVisIcon">visibility_off</i>
+            <i class="material-symbols-outlined" id="passVisIcon" data-toggle="tooltip" data-placement="right" title="Change password visibility">visibility_off</i>
             <input type="password" required="" id="passwordInput"/>
             <label>Password</label>
           </div>
           <div class="input-container right-inner-addon">         <!--Password input re-->
-            <i class="material-symbols-outlined" title="Generate password" id="passGenIcon">autorenew</i>
+            <i class="material-symbols-outlined" id="passGenIcon" data-toggle="tooltip" data-placement="right" title="Generate password">autorenew</i>
             <input type="password" required="" id="passwordInputRe"/>
             <label>Password again</label>
           </div>
           <div>                                                   <!--Age input-->
             <label">Age</label>
-            <label style="float: right;" id="ageShow">Select</label>
+            <label style="float: right; position: relative; right: 15px;" id="ageShow"><i class="material-symbols-outlined" style="font-size: 16px;" title="age">question_mark</i></label>
             <div style="text-align: center;" class="justify-content-evenly">
-              <div style="display: inline;">
+              <div style="display: inline;">  
                 <i class="material-symbols-outlined" title="Generate password">man</i>
                 <input type="range" class="form-range" style="width: 60%;" id="ageRange" min="18" max="60" >
                 <i class="material-symbols-outlined" title="Generate password">elderly</i>
@@ -53,9 +53,9 @@
               <div class="pb-2" style="border-bottom: 1px solid #fff; margin-bottom:20px;"></div>
             </div>
           </div>
-          <div" class="justify-content-evenly">                   <!--Gender input-->
+          <div" class="justify-content-evenly" style="position: relative;">                   <!--Gender input-->
               <label style="float: left;">Gender</label>
-              <label style="float: right;" id="genderShow">Select</label>
+              <label style="float: right; position: relative; right: 15px;" id="genderShow"><i class="material-symbols-outlined" style="font-size: 16px;" title="Gender">question_mark</i></label>
             <div style="clear: left; clear: right; text-align: center;">
               <input type="radio" name="gender" id="maleRadio" value="Male" onclick="selectedGender(this)">
               <label for="maleRadio"><i class="material-symbols-outlined" title="male" style="font-size: 70px;">male</i></label>
