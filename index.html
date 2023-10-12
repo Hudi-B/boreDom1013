@@ -6,47 +6,47 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="index.css">
     <title>Register</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.svg">
 </head>
 <body>
-
   <div class="container w-50">
     <div>
-      <form onsubmit="test()">
+      <form onsubmit="preventSubmit(event)" method="post">
           <div style="text-align: center;" class="pt-2">          <!--Header text-->
               <h1>Regisztráció</h1>
               <p>Kérem írja be az adatait</p>
           </div>
           <div class="input-container right-inner-addon">         <!--Name input-->
             <i class="material-symbols-outlined">signature</i>
-            <input type="text" required/>
+            <input type="text" id="nameInput" required/>
             <label>Név</label>
           </div>
           <div class="input-container right-inner-addon">         <!--Email input-->
             <i class="material-symbols-outlined">mail</i>
-            <input type="text" required/>
+            <input type="text" id="emailInput" required/>
             <label>Email</label>
           </div>
           <div class="input-container right-inner-addon">         <!--Password input-->
-            <i class="material-symbols-outlined" id="passVisIcon" data-toggle="tooltip" data-placement="top" title="See or hide password">visibility_off</i>
-            <input type="password" required id="passwordInput"/>
+            <i class="material-symbols-outlined" id="passVisIcon" data-toggle="tooltip" data-placement="top" title="Jelszó megjelenítése">visibility_off</i>
+            <input type="password" id="passwordInput" required/>
             <label>Jelszó</label>
           </div>
           <div class="input-container right-inner-addon">         <!--Password input re-->
-            <i class="material-symbols-outlined" id="passGenIcon" data-toggle="tooltip" data-placement="top" title="Generate or set password">sync_disabled</i>
-            <input type="password" required id="passwordInputRe"/>
+            <i class="material-symbols-outlined" id="passGenIcon" data-toggle="tooltip" data-placement="top" title="Jelszó generálás vagy állítás">sync_disabled</i>
+            <input type="password" id="passwordInputRe" required/>
             <label>Jelszó újra</label>
           </div>
           <div>                                                   <!--Age input-->
             <label">Kor</label>
             <label style="float: right; position: relative; right: 15px;" id="ageShow"><i class="material-symbols-outlined" style="font-size: 16px;" title="age">question_mark</i></label>
             <div style="text-align: center;" class="justify-content-evenly">
-              <div style="display: inline;">  
+              <div style="display: inline;">
                 <i class="material-symbols-outlined" title="Generate password">man</i>
                 <input type="range" class="form-range" style="width: 60%;" id="ageRange" min="18" max="60" required>
                 <i class="material-symbols-outlined" title="Generate password">elderly</i>
@@ -58,7 +58,7 @@
               <label style="float: left;">Nemi identitás</label>
               <label style="float: right; position: relative; right: 15px;" id="genderShow"><i class="material-symbols-outlined" style="font-size: 16px;" title="Gender">question_mark</i></label>
             <div style="clear: left; clear: right; text-align: center;">
-              <input type="radio" name="gender" id="maleRadio" value="Férfi" onclick="selectedGender(this)" required>
+              <input type="radio" name="gender" id="maleRadio" value="Férfi" onclick="selectedGender(this)">
               <label for="maleRadio"><i class="material-symbols-outlined" title="male" style="font-size: 70px;">male</i></label>
               <input type="radio" name="gender" id="otherRadio" value="Egyéb" onclick="selectedGender(this)">
               <label for="otherRadio"><i class="material-symbols-outlined" title="other" style="font-size: 60px;">transgender</i></label>
@@ -69,7 +69,7 @@
           </div>
           <div class="input-container right-inner-addon">          <!--Field input-->
             <i class="material-symbols-outlined">work</i>
-            <input type="text" required/>
+            <input type="text" id="fieldInput" required/>
             <label>Foglalkozás</label>
           </div>
           <div class="right-inner-addon dropdown">                 <!--Job select-->
@@ -79,12 +79,10 @@
             </select>
           </div>
           <div style="text-align: center;" class="py-4">            <!--Submit button-->
-            <button type="submit" id="sub" class="btn btn-outline-light" value="Submit">Regisztrál</button>
+            <button type="submit" id="sub" class="btn btn-outline-light" value="Submit" onclick="onSubmit()">Regisztrál</button>
           </div>
       </form>
     </div>
   </div>
-
-<script src="index.js" defer></script>
 </body>
 </html>
