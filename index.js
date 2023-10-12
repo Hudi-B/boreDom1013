@@ -57,15 +57,31 @@ passGenIcon.addEventListener("click", function() {
     const genChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+"
     let pass = "";
 
-    for (let index = 0; index <= 10; index++) {
-        const rndIndex = Math.floor(Math.random() * genChars.length);
-        pass += genChars[rndIndex];
+    if (passwordInput.disabled) {
+        passGenIcon.textContent = "sync_disabled"
+        passwordInput.removeAttribute('disabled')
+        passwordInput.value = ""
+        passwordInputRe.removeAttribute('disabled')
+        passwordInputRe.value = ""
     }
-
-    passwordInput.value = pass;
-    passwordInputRe.value = pass;
+    else {
+        for (let index = 0; index <= 10; index++) {
+            const rndIndex = Math.floor(Math.random() * genChars.length);
+            pass += genChars[rndIndex];
+        }
+        passGenIcon.textContent = "sync"
+        passwordInput.setAttribute('disabled', '')
+        passwordInput.setAttribute('disabled', '')
+        passwordInput.value = pass;
+        passwordInputRe.setAttribute('disabled', '')
+        passwordInputRe.value = pass;
+    }
 })
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
+
+function test() {
+    alert('button pressed')
+}

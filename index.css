@@ -56,7 +56,8 @@ body {
   border-bottom:1px solid #383838;	
 }
 .input-container input:focus ~ label,
-.input-container input:valid ~ label{
+.input-container input:valid ~ label,
+.input-container input:disabled ~ label{
 	top:-12px;
 	font-size:12px;
   color: #383838;
