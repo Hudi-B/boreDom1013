@@ -19,13 +19,13 @@
     <div>
       <form onsubmit="test()">
           <div style="text-align: center;" class="pt-2">          <!--Header text-->
-              <h1>Register</h1>
-              <p>Please input your credentials</p>
+              <h1>Regisztráció</h1>
+              <p>Kérem írja be az adatait</p>
           </div>
           <div class="input-container right-inner-addon">         <!--Name input-->
             <i class="material-symbols-outlined">signature</i>
             <input type="text" required/>
-            <label>Name</label>
+            <label>Név</label>
           </div>
           <div class="input-container right-inner-addon">         <!--Email input-->
             <i class="material-symbols-outlined">mail</i>
@@ -35,15 +35,15 @@
           <div class="input-container right-inner-addon">         <!--Password input-->
             <i class="material-symbols-outlined" id="passVisIcon" data-toggle="tooltip" data-placement="top" title="See or hide password">visibility_off</i>
             <input type="password" required id="passwordInput"/>
-            <label>Password</label>
+            <label>Jelszó</label>
           </div>
           <div class="input-container right-inner-addon">         <!--Password input re-->
             <i class="material-symbols-outlined" id="passGenIcon" data-toggle="tooltip" data-placement="top" title="Generate or set password">sync_disabled</i>
             <input type="password" required id="passwordInputRe"/>
-            <label>Password again</label>
+            <label>Jelszó újra</label>
           </div>
           <div>                                                   <!--Age input-->
-            <label">Age</label>
+            <label">Kor</label>
             <label style="float: right; position: relative; right: 15px;" id="ageShow"><i class="material-symbols-outlined" style="font-size: 16px;" title="age">question_mark</i></label>
             <div style="text-align: center;" class="justify-content-evenly">
               <div style="display: inline;">  
@@ -55,14 +55,14 @@
             </div>
           </div>
           <div" class="justify-content-evenly" style="position: relative;">                   <!--Gender input-->
-              <label style="float: left;">Gender</label>
+              <label style="float: left;">Nemi identitás</label>
               <label style="float: right; position: relative; right: 15px;" id="genderShow"><i class="material-symbols-outlined" style="font-size: 16px;" title="Gender">question_mark</i></label>
             <div style="clear: left; clear: right; text-align: center;">
-              <input type="radio" name="gender" id="maleRadio" value="Male" onclick="selectedGender(this)" required>
+              <input type="radio" name="gender" id="maleRadio" value="Férfi" onclick="selectedGender(this)" required>
               <label for="maleRadio"><i class="material-symbols-outlined" title="male" style="font-size: 70px;">male</i></label>
-              <input type="radio" name="gender" id="otherRadio" value="Other" onclick="selectedGender(this)">
+              <input type="radio" name="gender" id="otherRadio" value="Egyéb" onclick="selectedGender(this)">
               <label for="otherRadio"><i class="material-symbols-outlined" title="other" style="font-size: 60px;">transgender</i></label>
-              <input type="radio" name="gender" id="femaleRadio" value="Female" onclick="selectedGender(this)">
+              <input type="radio" name="gender" id="femaleRadio" value="Nő" onclick="selectedGender(this)">
               <label for="femaleRadio"><i class="material-symbols-outlined" title="female" style="font-size: 70px;">female</i></label>
             </div>
             <div style="border-bottom: 1px solid #fff; margin-bottom:20px;"></div>
@@ -70,16 +70,16 @@
           <div class="input-container right-inner-addon">          <!--Field input-->
             <i class="material-symbols-outlined">work</i>
             <input type="text" required/>
-            <label>Field</label>
+            <label>Foglalkozás</label>
           </div>
           <div class="right-inner-addon dropdown">                 <!--Job select-->
             <i class="material-symbols-outlined" id="dropIcon">keyboard_arrow_left</i>
             <select class="form-select selectpicker" id="jobSelect" required>
-              <option style="color: #383838;" value="">Select a profession</option>
+              <option style="color: #383838;" value="">Válasszon egy ágazatot</option>
             </select>
           </div>
           <div style="text-align: center;" class="py-4">            <!--Submit button-->
-            <button type="submit" id="sub" class="btn btn-outline-light" value="Submit">Submit</button>
+            <button type="submit" id="sub" class="btn btn-outline-light" value="Submit">Regisztrál</button>
           </div>
       </form>
     </div>

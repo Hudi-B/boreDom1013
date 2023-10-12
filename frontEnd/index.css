@@ -1,0 +1,103 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('backgroundimg.png');
+}
+
+.block{
+  font-size:1vw;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35vw;
+  background-color: rgba(255,255,255,0.36018914401698177);
+  border-radius: 3vw;
+  padding-left: 4vw;
+  box-shadow: 4px 4px rgb(38, 37, 37);
+    
+}
+hr{
+  border-top: 1px solid black;
+  border-width: 50%;
+}
+
+.age_table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+label{
+    color:black;
+}
+
+.psw_input{
+    display: none;
+}
+.submit_btn{
+  width: 20vw;
+  height:2.5vw;
+  margin-top: 1.5vw;
+  margin-bottom:1.5vw;
+}
+
+.common_btn {        /*width:height == 3:1*/
+    width: fit-content;
+    height:2.5vw;
+    border:none;
+    border:solid 0.15vw rgb(250, 200, 152);
+    border-radius:5vw;     /*half as height*/
+    background: rgb(250, 200, 152);
+    font-size: 1vw;
+    box-shadow: 4px 4px rgb(38, 37, 37);
+    font-weight: bold;
+    color:black;
+  }
+  .common_btn:active {
+    background-color: black; /*make this the same as the border color*/
+    border-color: black;
+    color:white; 
+  }
+
+.submit_btn{
+  width: 20vw;
+  height: 4vw;
+  font-size: 2vw;
+  font-weight: bold;
+  letter-spacing: 0.2vw;
+  margin-top: 1.5vw;
+  margin-bottom:1.5vw;
+
+}
+
+
+  .input_text{
+    width: 40%;
+    font-size: 1vw;
+    background: none;
+    border:none;
+    border-bottom:solid 0.3vw black;
+  }
+  
+  .input_text:focus{    /*while clicked on or writing*/
+    color: white;
+    background-color: rgba(0, 0, 0, 1);/*color of the body background*/
+  }
+
+  input[type="radio"]::before{
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+
+  .div_big{
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+  }
